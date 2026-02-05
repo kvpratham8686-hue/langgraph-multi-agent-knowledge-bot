@@ -1,7 +1,7 @@
 import sys
 import os
 
-# ✅ Add project root to Python path so langgraph can be found
+# Add project root to Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from fastapi import FastAPI
@@ -15,10 +15,11 @@ class QueryRequest(BaseModel):
     query: str
 
 
-api = FastAPI(title="LangGraph Multi-Agent API")
+# IMPORTANT: variable name MUST be `app`
+app = FastAPI(title="LangGraph Multi-Agent API")
 
 
-@api.post("/query")
+@app.post("/query")
 async def query_agent(request: QueryRequest):
     result = langgraph_app.invoke({"query": request.query})
     return {"response": result}
