@@ -10,6 +10,7 @@ The application exposes a REST API that allows users to submit questions and rec
 
 ## 📂 Project Structure
 
+```text
 langgraph-multi-agent-knowledge-bot/
 ├── api/
 │   ├── main.py              # FastAPI application entry point
