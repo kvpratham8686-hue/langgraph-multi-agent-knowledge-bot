@@ -11,16 +11,18 @@ The application exposes a REST API that allows users to submit questions and rec
 
 ## 📁 Project Structure
 
+```text
 langgraph-multi-agent-knowledge-bot/
 ├── api/
-│ ├── main.py # FastAPI application entry point
-│ ├── graph/
-│ │ └── agent_graph.py # LangGraph workflow definition
-│ └── agents/
-│ └── init.py # Agent logic (extendable)
-├── requirements.txt # Project dependencies
-├── README.md # Project documentation
+│   ├── main.py                # FastAPI application entry point
+│   ├── graph/
+│   │   └── agent_graph.py     # LangGraph workflow definition
+│   └── agents/
+│       └── __init__.py        # Agent logic (extendable)
+├── requirements.txt           # Project dependencies
+├── README.md                  # Project documentation
 └── .gitignore
+```
 
 ---
 
@@ -28,11 +30,11 @@ langgraph-multi-agent-knowledge-bot/
 
 ### 1️⃣ Prerequisites
 
-Make sure you have the following installed:
+Make sure you have:
 
-- Python 3.10 or 3.11  
-- Git  
-- Internet connection  
+- Python 3.10 or 3.11
+- Git
+- Internet connection
 
 ---
 
@@ -41,118 +43,136 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/<your-username>/langgraph-multi-agent-knowledge-bot.git
 cd langgraph-multi-agent-knowledge-bot
+```
 
-3️⃣ Create Virtual Environment
-Activate the environment:
+---
 
-Windows
+### 3️⃣ Create Virtual Environment
 
+```bash
+python -m venv venv
+```
+
+**Activate the environment**
+
+- **Windows**
+```bash
 venv\Scripts\activate
+```
 
-
-Linux / macOS
-
+- **Linux / macOS**
+```bash
 source venv/bin/activate
+```
 
-4️⃣ Install Dependencies
+---
+
+### 4️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-▶️ How to Run the Project
+---
+
+## ▶️ How to Run the Project
 
 From the project root directory, run:
 
+```bash
 uvicorn api.main:app --reload
-
+```
 
 Server will start at:
 
+```
 http://127.0.0.1:8000
+```
 
-🌐 API Usage
-Swagger UI
+---
+
+## 🌐 API Usage
+
+### Swagger UI
 
 Open your browser and go to:
 
+```
 http://127.0.0.1:8000/docs
-
+```
 
 You can:
+- View available APIs
+- Test requests interactively
+- See request and response formats
 
-View available APIs
+---
 
-Test requests interactively
+### Sample API Endpoint
 
-See request & response formats
+**POST** `/query`
 
-Sample API Endpoint
-
-POST /query
-
-Request Body (JSON):
-
+**Request Body**
+```json
 {
   "question": "What is LangGraph?"
 }
+```
 
-
-Response (JSON):
-
+**Response**
+```json
 {
   "answer": "LangGraph is a framework for building multi-agent workflows using graphs."
 }
+```
 
-🧪 Testing
+---
 
-Open Swagger UI
+## 🧪 Testing
 
-Select POST /query
+1. Open Swagger UI
+2. Select **POST /query**
+3. Click **Try it out**
+4. Enter a question
+5. Click **Execute**
+6. View the response
 
-Click Try it out
+---
 
-Enter a question
+## 🚀 Features
 
-Click Execute
+- Multi-agent orchestration using LangGraph
+- FastAPI-based REST API
+- Modular and extensible agent design
+- Interactive API documentation with Swagger
 
-View the response
+---
 
-🚀 Features
+## 🔮 Future Enhancements
 
-Multi-agent orchestration using LangGraph
+- Add memory support for agents
+- Integrate vector databases
+- Add authentication & authorization
+- Build a UI dashboard
 
-FastAPI-based REST API
+---
 
-Modular and extensible agent design
+## 👨‍💻 Author
 
-Interactive API documentation with Swagger
+**K.V. Pratham**  
+B.Tech – Information Technology  
 
-🔮 Future Enhancements
-
-Add memory support for agents
-
-Integrate vector databases
-
-Add authentication & authorization
-
-Build a UI dashboard
-
-👨‍💻 Author
-
-K.V. Pratham
-B.Tech – Information Technology
-
-GitHub:
+GitHub:  
 https://github.com/kvpratham8686-hue
 
-📤 Submission Notes
+---
+
+## 📤 Submission Notes
 
 This repository includes:
-
-Complete source code
-
-Clean README documentation
-
-Setup and run instructions
-
-API documentation via Swagger UI
+- Complete source code
+- Clean README documentation
+- Setup and run instructions
+- API documentation via Swagger UI
 
 The project is ready for evaluation and deployment.
