@@ -11,14 +11,15 @@ The application exposes a REST API that allows users to submit questions and rec
 ## 📂 Project Structure
 
 langgraph-multi-agent-knowledge-bot/
-├── api/                 # FastAPI application
-│   └── main.py
-├── graph/               # LangGraph workflow
-│   └── agent_graph.py
-├── agents/              # Agent logic (extendable)
-├── requirements.txt     # Project dependencies
-├── README.md            # Project documentation
-├── .gitignore
+├── api/
+│   ├── main.py              # FastAPI application entry point
+│   ├── graph/
+│   │   └── agent_graph.py   # LangGraph workflow
+│   └── agents/              # Agent logic (extendable)
+├── requirements.txt         # Project dependencies
+├── README.md                # Project documentation
+└── .gitignore
+
 
 ---
 
